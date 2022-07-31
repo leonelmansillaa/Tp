@@ -58,7 +58,6 @@ li a.active, li a:hover{
 #check{
     display: none;
 }
-
 .encabezado-img{
     background-image: url(image/fondo.jpg);
     height: 100%;
@@ -75,46 +74,6 @@ li a.active, li a:hover{
 .encabezado-img h1{
     font-size: 50px;
     padding: 20px 0;
-}
-
-@media (max-width: 952px){
-    .enlace{
-        padding-left: 20px;
-    }
-    nav ul li a{
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 858px){
-    .checkbtn{
-        display: block;
-    }
-    ul{
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background: #f9c326;
-        top: 80px;
-        left: -100%;
-        text-align: center;
-        transition: all .5s;
-    }
-    nav ul li{
-        display: block;
-        margin: 50px 0;
-        line-height: 30px;
-    }
-    nav ul li a{
-        font-size: 20px;
-    }
-    li a:hover, li a.active{
-        background: none;
-        color: #000;
-    }
-    #check:checked ~ ul{
-        left:0;
-    }
 }
 
 
@@ -139,9 +98,6 @@ li a.active, li a:hover{
 }
 .parrafo{
     margin-bottom: 20px;
-}
-.header{
-    height: 500px;
 }
 .img-hero{
     width: 100%;
@@ -174,6 +130,7 @@ li a.active, li a:hover{
         background: #f9c326;
         transition: .5s;
     } 
+
 
 /*SECTION 2*/
 .services{
@@ -228,6 +185,7 @@ li a.active, li a:hover{
     width: 22%;
 }
 
+
 /*SECTION 3*/
 .mission{
     padding: 80px 0;
@@ -243,88 +201,161 @@ li a.active, li a:hover{
 }
 
 /*CONTACTO*/
-.content{
-    background-color: #676a6e;
-    max-width: 1170px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2.5em;
-    padding: 2.5em;
-    color: #Fff;
-}
-.logo-contact{
-    text-align: center;
-    font-size: 3em;
-}
-
-.logo-contact span{
-    color: #f9c326;
-}
-.contact-wrapper{
-    box-shadow: 0 0 20px rgba(255, 255, 255);
-}
-.contact-wrapper > * {
-    padding: 1em;
-}
-.contact-form{
-    background: #262626;
-}
-.contact-form form p{
-    margin: 0;
-    padding: 1em;
-}
-.contact-form form{
+.grid_contact{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(8,1fr);
+}
+.grid_contact_info{
+    grid-column: 6/-1;
+    margin: auto;
 }
 
-.contact-form form button,
-.contact-form form input,
-.contact-form form textarea{
+.formulario{
+    grid-column: 1/6;
+    margin: auto;
+}
+.contact_body{
+    display: flex;
+    min-height: 100vh;
+    background-color: #474747;
+}
+.form{
+    background-color: #262626;
+    margin-top: 100px;
+    width: 90%;
+    max-width: 400px;
+    padding: 4.5em 3em;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.5);
+}
+.form_title{
+    font-size: 2rem;
+    margin-bottom: .5em;
+}
+.form_title span{
+    color: #f9c326;
+}
+.form_parrafo{
+    font-weight: 300;
+}
+.form_container{
+    margin-top: 3em;
+    display: grid;
+    gap: 2.5em;
+}
+.fomr_group{
+    position: relative;
+    color: #f9c326;
+}
+.form_input{
     width: 100%;
-    padding: .7em;
-    border: none;
     background: none;
-    border-bottom: 1px solid #f9c326;
+    color: #fff;
+    font-size: 1rem;
+    padding: .6em 3em;
+    border: none;
     outline: none;
-    color: #Fff;
+    border-bottom: 1px solid #f9c326;
 }
-.contact-form form button{
+.form_label{
+    color: #f9c326;
+    cursor: pointer;
+}
+.form_submit{
     background-color: #f9c326;
-    border: 0;
-    text-transform: uppercase;
-    padding: 1em;
+    color: #000;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: .8em 0;
+    border: none;
+    border-radius: .5em;
+    cursor: pointer;
 }
-.contact-form form button:hover{
+.form_submit:hover{
     background-color: #000;
     color: #f9c326;
-    transition: all 0.5s;
+    transition: all .5s;
 }
-.contact-info{
-    background-color: #000;
+.form_group textarea{
+    width: 100%;
+    padding: 4em;
+    background: none;
+    border: none;
+    outline: 0;
+    border-bottom: 1px solid #f9c326;
 }
-.contact-info h4,
-.contact-info ul,
-.contact-info p{
-    text-align: center;
-    margin: 0 0 1rem 0;
+.grid_contact_info h1{
+    color: #f9c326;
+    font-size: 45px;
+    text-shadow: 5px 5px rgba(0, 0, 0, 0.5);
 }
-.contact-info ul li{
-    padding: .3em;
+.grid_contact_info h4{
+    font-size: 30px;
+}
+.grid_contact_info li{
+    padding: 8px;
+    font-size: 20px;
 }
 
 
-/*INFORMACION*/
-.infomain{
+/*PLANES*/
+.main_plan{
+    background-color: #262626;
+    color: #Fff;
+}
+.grid_img_plan{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+    gap: 10px;
+    overflow: hidden;
+    align-items: center;
+    padding-top: 50px;
+
+}
+.img_plan{
+    width: 100%;
+    height: auto;
+    grid-column: -1/1;
+}
+.grid_plan{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    gap: 10px;
+    overflow: hidden;
+    align-items: center;
+    padding-top: 50px;
+}
+.text_plan{
+    grid-column: -5/-2;
+}
+.parrafo_plan{
+    margin-bottom: 20px;
+}
+.plan{
+    grid-column: 1/9;
+    padding: 20px;
+    font-size: 70px;
+    color: #f9c326;
+    border-radius: 5px;
+    
+}
+.bonus{
+    grid-column: 1/-1;
+    text-align: center;
+    color: #f9c326;
+}
+.parrafo_plan{
+    grid-column: 1/-1;
     text-align: center;
 }
-.img-info{
-    height: 50px;
-    width: 50px;
-}
-.informacion{
-    color: tomato;
-}
+
+
 
 
 
@@ -350,7 +381,6 @@ footer{
 /*RESPONSIVE*/
 @media screen and (max-width:800px){
    
-
     .header{
         height: auto;
     } 
@@ -399,11 +429,21 @@ footer{
     .contact-info p{
         padding: 1em;
     }
-}
 
-/*SERVICIOS*/
-.planes{
-    margin: 40px;
+    .grid_plan{
+        grid-gap: 30px;
+        padding-top: 80px;
+    }
+    .plan{
+        grid-column: 1/-1;
+        text-align: center;   
+    }
+    .text_plan{
+        grid-column: 1/-1;
+        text-align: center;
+    }
+
+
 }
 
 @media screen and (max-width:400px){
@@ -431,5 +471,45 @@ footer{
     }
 }
 
+/*NAV*/
+@media (max-width: 952px){
+    .enlace{
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #f9c326;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    li a:hover, li a.active{
+        background: none;
+        color: #000;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+}
 
 
